@@ -17,3 +17,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.format()
   end,
 })
+
+-- Formatar manualmente
+vim.api.nvim_create_user_command("Fmt", function()
+  vim.lsp.buf.format()
+end, {})
